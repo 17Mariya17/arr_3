@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <h1>ДЗ 15. Масив</h1>
+    <script>
+      //Створити масив, довжину та елементи якого задає користувач.
+      let all_words = prompt("Введіть елементи масиву через кому");
+      let array = all_words.split(",");
+      document.write(
+        " <b> 1. Довжина масиву: </b>" +
+          array.length +
+          ";" +
+          "<b> Елементи масиву: </b>" +
+          array +
+          "<br>"
+      );
+      // Відсортувати масив за зростанням.
+      let array_1 = array.sort();
+      document.write(
+        "<br> <b> 2. Відсортувати масив за зростанням: </b>" +
+          array.sort(function (a, b) {
+            return a - b;
+          }) +
+          "<br>"
+      );
+      // Видалити елементи з масиву з 2 по 4 (включно!).
+      document.write(
+        "<br> <b> 3. Видалити елементи з масиву з 2 по 4 (включно!): </b>" +
+          array.slice(0, 1).concat(array.slice(4)) +
+          "<br>"
+      );
+    </script>
+  </body>
 </html>
